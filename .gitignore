@@ -1,6 +1,7 @@
 #customisatons
 **/.venv
 pcbs/**/*-backups
+**/*.afdesign~lock~
 
 
 # Byte-compiled / optimized / DLL files
