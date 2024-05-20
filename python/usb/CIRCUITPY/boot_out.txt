@@ -1,0 +1,4 @@
+Adafruit CircuitPython 9.1.0-beta.1 on 2024-04-19; Raspberry Pi Pico with rp2040
+Board ID:raspberry_pi_pico
+UID:45474E621987795A
+boot.py output:
