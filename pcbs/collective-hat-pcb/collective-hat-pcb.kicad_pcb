@@ -219,7 +219,7 @@
 		(descr "JST PH series connector, S6B-PH-K (http://www.jst-mfg.com/product/pdf/eng/ePH.pdf), generated with kicad-footprint-generator")
 		(tags "connector JST PH top entry")
 		(property "Reference" "J4"
-			(at 5 -2.549999 165)
+			(at 4.999999 -2.549999 165)
 			(layer "F.SilkS")
 			(uuid "64a8363d-1a61-4083-9403-bc4e75e089cc")
 			(effects
@@ -230,7 +230,7 @@
 			)
 		)
 		(property "Value" "Conn_01x06"
-			(at 5 7.449999 165)
+			(at 5.000001 7.449999 165)
 			(layer "F.Fab")
 			(uuid "4e899094-e76c-4173-94c3-a9d9bfda8d86")
 			(effects
@@ -502,7 +502,7 @@
 			(uuid "2f16c908-4052-4c37-988e-66fed4ad6ab3")
 		)
 		(fp_line
-			(start 11.14 -1.460001)
+			(start 11.14 -1.460002)
 			(end 11.140001 0.14)
 			(stroke
 				(width 0.12)
@@ -523,7 +523,7 @@
 		)
 		(fp_line
 			(start 12.06 -1.460001)
-			(end 11.14 -1.460001)
+			(end 11.14 -1.460002)
 			(stroke
 				(width 0.12)
 				(type solid)
@@ -643,7 +643,7 @@
 		)
 		(fp_line
 			(start 11.95 6.25)
-			(end 11.949999 -1.350001)
+			(end 11.949999 -1.350002)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -672,7 +672,7 @@
 			(uuid "8a3ad517-c3c7-4f5b-9cdc-9e5dea24893c")
 		)
 		(fp_line
-			(start 11.949999 -1.350001)
+			(start 11.949999 -1.350002)
 			(end 11.25 -1.349999)
 			(stroke
 				(width 0.1)
@@ -682,7 +682,7 @@
 			(uuid "0f302d38-b235-4ba8-a09a-a2697ae47b42")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 5 2.5 165)
+			(at 5.000001 2.5 165)
 			(layer "F.Fab")
 			(uuid "faea62c1-1806-44ee-9f86-1cf32df20690")
 			(effects
@@ -844,7 +844,7 @@
 		(attr through_hole)
 		(fp_circle
 			(center 0 0)
-			(end 4.950001 0.000001)
+			(end 4.950002 0.000001)
 			(stroke
 				(width 0.05)
 				(type default)
@@ -1097,7 +1097,7 @@
 		(descr "JST PH series connector, S6B-PH-K (http://www.jst-mfg.com/product/pdf/eng/ePH.pdf), generated with kicad-footprint-generator")
 		(tags "connector JST PH top entry")
 		(property "Reference" "J1"
-			(at 5 -2.55 353)
+			(at 5 -2.55 -7)
 			(layer "F.SilkS")
 			(uuid "c301bc0a-a80c-4686-b2f7-b73c9fedf1d1")
 			(effects
@@ -1108,7 +1108,7 @@
 			)
 		)
 		(property "Value" "Conn_01x06"
-			(at 5 7.45 353)
+			(at 5 7.45 -7)
 			(layer "F.Fab")
 			(uuid "08ed665e-a2ee-48de-b6e6-f40e77921b3b")
 			(effects
@@ -1201,7 +1201,7 @@
 		)
 		(fp_line
 			(start 11.14 0.14)
-			(end 10.86 0.140001)
+			(end 10.86 0.140002)
 			(stroke
 				(width 0.12)
 				(type solid)
@@ -1521,7 +1521,7 @@
 		)
 		(fp_line
 			(start -1.25 -1.35)
-			(end -1.95 -1.350001)
+			(end -1.95 -1.350002)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -1540,7 +1540,7 @@
 			(uuid "97adc680-d14f-4dac-87b2-df64a1c471a3")
 		)
 		(fp_line
-			(start -1.95 -1.350001)
+			(start -1.95 -1.350002)
 			(end -1.95 6.25)
 			(stroke
 				(width 0.1)
@@ -1560,7 +1560,7 @@
 			(uuid "aade28cf-ff89-4864-b934-c440e1c24395")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 5 2.5 353)
+			(at 5 2.5 -7)
 			(layer "F.Fab")
 			(uuid "5438da0f-13b1-4024-9d1b-c3c8917f61ce")
 			(effects
@@ -1898,7 +1898,7 @@
 		)
 		(fp_line
 			(start -7.85 -6.825)
-			(end -4.999999 -6.825)
+			(end -4.999998 -6.825)
 			(stroke
 				(width 0.05)
 				(type solid)
@@ -1907,7 +1907,7 @@
 			(uuid "70d87211-eb70-4948-9225-90044a94b424")
 		)
 		(fp_line
-			(start -4.549999 11.85)
+			(start -4.549999 11.850001)
 			(end -4.550001 6.825)
 			(stroke
 				(width 0.05)
@@ -1927,7 +1927,7 @@
 			(uuid "beeda956-043c-4e7f-86ad-e7532e6b1c82")
 		)
 		(fp_line
-			(start -4.999999 -6.825)
+			(start -4.999998 -6.825)
 			(end -5 -9.95)
 			(stroke
 				(width 0.05)
@@ -1948,7 +1948,7 @@
 		)
 		(fp_line
 			(start 4.550001 11.85)
-			(end -4.549999 11.85)
+			(end -4.549999 11.850001)
 			(stroke
 				(width 0.05)
 				(type solid)
@@ -2885,7 +2885,7 @@
 		(sheetfile "collective-hat-pcb.kicad_sch")
 		(attr through_hole)
 		(fp_line
-			(start 12.059999 6.360001)
+			(start 12.059998 6.360001)
 			(end 12.06 -1.46)
 			(stroke
 				(width 0.12)
@@ -2966,7 +2966,7 @@
 		)
 		(fp_line
 			(start -2.06 6.36)
-			(end 12.059999 6.360001)
+			(end 12.059998 6.360001)
 			(stroke
 				(width 0.12)
 				(type solid)
@@ -3341,7 +3341,7 @@
 			(uuid "f89fe328-167d-46ca-a6c4-cbca71e156d8")
 		)
 		(pad "5" thru_hole oval
-			(at 8.000001 0 245)
+			(at 8.000001 0.000001 245)
 			(size 1.2 1.75)
 			(drill 0.75)
 			(layers "*.Cu" "*.Mask")
@@ -3677,7 +3677,7 @@
 		)
 		(fp_line
 			(start -1.140001 -1.459999)
-			(end -2.059999 -1.460002)
+			(end -2.059999 -1.460003)
 			(stroke
 				(width 0.12)
 				(type solid)
@@ -3686,7 +3686,7 @@
 			(uuid "19d146d2-3045-4030-a2a3-e0ebad090783")
 		)
 		(fp_line
-			(start -2.059999 -1.460002)
+			(start -2.059999 -1.460003)
 			(end -2.06 6.359999)
 			(stroke
 				(width 0.12)
@@ -4152,7 +4152,7 @@
 		(descr "JST PH series connector, B6B-PH-K (http://www.jst-mfg.com/product/pdf/eng/ePH.pdf), generated with kicad-footprint-generator")
 		(tags "connector JST PH side entry")
 		(property "Reference" "J6"
-			(at 4.92 -4.318 360)
+			(at 4.92 -4.318 0)
 			(layer "B.SilkS")
 			(uuid "d3822cef-7aa7-4532-a25c-56b389b4025a")
 			(effects
@@ -4164,7 +4164,7 @@
 			)
 		)
 		(property "Value" "Conn_01x06"
-			(at 5 -4 360)
+			(at 5 -4 0)
 			(layer "B.Fab")
 			(uuid "ba91d522-0775-40c8-a6ab-161fe0c80d76")
 			(effects
@@ -4730,7 +4730,7 @@
 			(uuid "f8699d80-c854-466f-97cc-6db99bb3328b")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 5 -1.5 360)
+			(at 5 -1.5 0)
 			(layer "B.Fab")
 			(uuid "e72d5255-1e44-463a-a336-6142a17a075f")
 			(effects
@@ -4827,7 +4827,7 @@
 		(descr "JST PH series connector, B6B-PH-K (http://www.jst-mfg.com/product/pdf/eng/ePH.pdf), generated with kicad-footprint-generator")
 		(tags "connector JST PH side entry")
 		(property "Reference" "J5"
-			(at 2.73 -4.572 360)
+			(at 2.73 -4.572 0)
 			(layer "B.SilkS")
 			(uuid "183e4fca-f578-484f-8e9f-6f490b04f577")
 			(effects
@@ -4839,7 +4839,7 @@
 			)
 		)
 		(property "Value" "Conn_01x06"
-			(at 5 -4 360)
+			(at 5 -4 0)
 			(layer "B.Fab")
 			(uuid "4854cc3c-1c94-4694-afcb-b6e6d7e2aec3")
 			(effects
@@ -5405,7 +5405,7 @@
 			(uuid "c72684eb-2ab2-4b6f-ab93-bda068d51d1a")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 5 -1.5 360)
+			(at 5 -1.5 0)
 			(layer "B.Fab")
 			(uuid "d1774814-5f76-44b6-8402-281cbec8add5")
 			(effects

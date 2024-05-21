@@ -5,7 +5,7 @@
       "Application": "Pcbnew",
       "Version": "8.0.1"
     },
-    "CreationDate": "2024-04-24T21:25:30+12:00"
+    "CreationDate": "2024-05-21T18:15:33+12:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
@@ -31,36 +31,6 @@
     }
   ],
   "FilesAttributes": [
-    {
-      "Path": "collective-hat-pcb-F_Cu.gbr",
-      "FileFunction": "Copper,L1,Top",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "collective-hat-pcb-B_Cu.gbr",
-      "FileFunction": "Copper,L2,Bot",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "collective-hat-pcb-F_Silkscreen.gbr",
-      "FileFunction": "Legend,Top",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "collective-hat-pcb-B_Silkscreen.gbr",
-      "FileFunction": "Legend,Bot",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "collective-hat-pcb-F_Mask.gbr",
-      "FileFunction": "SolderMask,Top",
-      "FilePolarity": "Negative"
-    },
-    {
-      "Path": "collective-hat-pcb-B_Mask.gbr",
-      "FileFunction": "SolderMask,Bot",
-      "FilePolarity": "Negative"
-    },
     {
       "Path": "collective-hat-pcb-Edge_Cuts.gbr",
       "FileFunction": "Profile",

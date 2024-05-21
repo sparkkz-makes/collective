@@ -2219,6 +2219,7 @@
 	)
 	(label "SDA"
 		(at 173.99 96.52 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2229,6 +2230,7 @@
 	)
 	(label "GND"
 		(at 173.99 66.04 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2239,6 +2241,7 @@
 	)
 	(label "ADC1"
 		(at 173.99 81.28 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2249,6 +2252,7 @@
 	)
 	(label "VBUS"
 		(at 173.99 60.96 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2259,6 +2263,7 @@
 	)
 	(label "SCL"
 		(at 173.99 93.98 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2269,6 +2274,7 @@
 	)
 	(label "ADC0"
 		(at 173.99 83.82 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
