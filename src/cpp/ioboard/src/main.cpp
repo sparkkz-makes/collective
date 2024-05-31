@@ -5,25 +5,27 @@
 #include "Hatswitch.h"
 
 #define SERIAL_BAUD 115200
-#define STARTUP_LOG_LEVEL LOG_LEVEL_VERBOSE
+#define STARTUP_LOG_LEVEL LOG_LEVEL_SILENT
 #define RUN_LOG_LEVEL LOG_LEVEL_SILENT
 
+MbedI2C i2c_device(i2c_sda, i2c_scl);
 uint8_t i2c_addr = i2c_base_address;
+uint8_t board_number;
 uint8_t i2c_buffer[i2c_buffer_length] = {0};
 int log_delay = 300;
-
+int i2c_debug_count;
 
 void I2CRequestISR();
 void UpdateBufferBit(int bitNumber, bool value);
 void CheckSerial();
 void PeriodicLog(int delay);
+void PeriodicFlash(uint8_t flashes);
 void LogData();
 
 void setup()
 {
     // setup serial and logging
     Serial.begin(SERIAL_BAUD);
-    while (!Serial);
     Log.begin(STARTUP_LOG_LEVEL, &Serial, false);
 
     // setup button pin modes
@@ -39,16 +41,19 @@ void setup()
     // read I2C address
     pinMode(i2c_address_lsb, INPUT_PULLUP);
     pinMode(i2c_address_msb, INPUT_PULLUP);
-    i2c_addr = i2c_base_address + (!digitalRead(i2c_address_msb) << 1) + !digitalRead(i2c_address_lsb);
+    board_number = (!digitalRead(i2c_address_msb) << 1) + !digitalRead(i2c_address_lsb) + 1;
+    i2c_addr = i2c_base_address + board_number - 1;
 
     // setup I2C
-    Wire.setSDA(i2c_sda);
-    Wire.begin(i2c_addr);
-    Wire.onRequest(I2CRequestISR);
+    i2c_device.begin(i2c_addr);
+    i2c_device.onRequest(I2CRequestISR);
+
+    // Led
+    pinMode(LED_BUILTIN, OUTPUT);
 
     Log.trace("Starting IO board on address %d" CR, i2c_addr);
     Log.notice("Change log level with [s]ilent, [f]atal, [e]rror, [w]arning, [n]otice, [t]race, [v]erbose" CR);
-    //Log.setLevel(RUN_LOG_LEVEL);
+    Log.setLevel(RUN_LOG_LEVEL);
 }
 
 void loop()
@@ -77,29 +82,15 @@ void loop()
         i2c_buffer[axes_buffer_offset + axes_offset + 1] = val; // lsb
     }
 
-    // // ##### temp output values to serial #####
-    // for (int i = (num_hats + buttons_bytes) * 8 -1; i >= 0; i--) {
-    //     int byte = i/8; int bit = i % 8;
-    //     bool set = i2c_buffer[byte] & (1 << bit);
-    //     Log.trace("%b", set);
-    // }
-    // for (int i = 0; i < num_axes; i++) {
-    //     int hi = i2c_buffer[axes_buffer_offset + i*2];
-    //     int low = i2c_buffer[axes_buffer_offset + i*2 + 1];
-    //     int padding = hi & 0x80 ? (int)0xFFFF0000 : 0x00000000;
-    //     int value = padding | (hi << 8) | low;
-    //     Log.trace(" %d", value);
-    // }
-    // Log.trace(CR);
-    // //Log.trace("%b"CR, digitalRead(28));
-    // delay(300);
     PeriodicLog(300);
+    PeriodicFlash(board_number);
     CheckSerial();
 }
 
 void I2CRequestISR()
 {
-    Wire.write(i2c_buffer, i2c_buffer_length);
+    i2c_device.write(i2c_buffer, i2c_buffer_length);
+    i2c_debug_count++;
 }
 
 void CheckSerial() {
@@ -135,7 +126,24 @@ void PeriodicLog(int delay) {
     }
 }
 
+void PeriodicFlash(uint8_t flashes) {
+    static ulong last_flash_millis;
+    static uint delay;
+    static bool state;
+    static uint8_t flash;
+    if (millis() - last_flash_millis > delay) {
+        state = !state; // change state
+        flash = (flash + 1) % (flashes *2);
+        digitalWrite(LED_BUILTIN, state);
+        delay = flash == 0 ? 2000 : 50;
+        last_flash_millis = millis();
+    }
+}
+
 void LogData() {
+    if (Log.getLevel() == LOG_LEVEL_SILENT) {
+        return;
+    }
     for (int i = (num_hats + buttons_bytes) * 8 -1; i >= 0; i--) {
         int byte = i/8; int bit = i % 8;
         bool set = i2c_buffer[byte] & (1 << bit);
@@ -148,5 +156,5 @@ void LogData() {
         int value = padding | (hi << 8) | low;
         Log.trace(" %d", value);
     }
-    Log.trace(CR);
+    Log.trace(" i2c:%d" CR, i2c_debug_count);
 }
